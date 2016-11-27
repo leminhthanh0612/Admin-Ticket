@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Ticket">
+  <DataContextMoniker Name="/TicketDataContext" />
+  <nestedChildShapes>
+    <classShape Id="644604d4-2069-45ac-9065-08e76145c943" absoluteBounds="2.875, 1.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/TicketDataContext/Passenger" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f2c53d5-7f0f-4056-a112-5c20eb830bd6" absoluteBounds="2.89, 1.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e6bdca8-449f-4fbb-a965-3bd8655a8415" absoluteBounds="6, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TicketDataContext/Coach" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c07257fd-c825-48f0-b2b1-cab63dd7df76" absoluteBounds="6.015, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42bbc7e3-25a7-4b49-9b3a-393c14fa3bfc" absoluteBounds="4.125, 4.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/TicketDataContext/Ticket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af694a4c-46d5-4504-9cb0-3ff635e4b9c5" absoluteBounds="4.14, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 3.4631982421875); (4.5 : 4.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TicketDataContext/Passenger/Passenger_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="644604d4-2069-45ac-9065-08e76145c943" />
+        <classShapeMoniker Id="42bbc7e3-25a7-4b49-9b3a-393c14fa3bfc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.0625005 : 3.40549967447917); (7.0625005 : 5.73159912109375); (6.125 : 5.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TicketDataContext/Coach/Coach_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="7e6bdca8-449f-4fbb-a965-3bd8655a8415" />
+        <classShapeMoniker Id="42bbc7e3-25a7-4b49-9b3a-393c14fa3bfc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

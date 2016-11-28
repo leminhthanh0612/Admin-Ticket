@@ -47,7 +47,7 @@ namespace AdminTicket
             lvTickets.Items.Clear();
             List<Ticket> tickets = new List<Ticket>();
             TicketController ticketController = new TicketController();
-            if (_checkedNew)
+            if (CheckedNew)
             {
                 tickets = ticketController.getNewTicketOrdred();
                 ListNew = tickets;
@@ -59,7 +59,11 @@ namespace AdminTicket
             
             FillDataToListView(tickets, lvTickets);
 
-            ticketController.updateIsNewTicket();
+            if(CheckedNew)
+            {
+                ticketController.updateIsNewTicket();
+            }
+           
         }
 
         private void lvTickets_SelectedIndexChanged(object sender, EventArgs e)

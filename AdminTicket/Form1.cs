@@ -13,6 +13,7 @@ namespace AdminTicket
 {
     public partial class MainForm : Form
     {
+        int times = 5;
         public MainForm()
         {
             TicketDataContext dc = new TicketDataContext();
@@ -84,19 +85,25 @@ namespace AdminTicket
             int countTicket = ticketController.CountNewTicketOrdered();
             if(countTicket > 0)
             {
-                formNotification frm = new formNotification();
-                frm.TicketNumber = countTicket;
-                frm.Show();
+                times--;
+                if (times > 0)
+                {
+                    formNotification frm = new formNotification();
+                    frm.TicketNumber = countTicket;
+                    frm.Show();
+                }
                 btnSeeNewTicket.Text = "Xem thông tin (" + countTicket + ") vé vừa được đặt";
                 btnSeeNewTicket.Visible = true;
             }else
             {
+                times = 5;
                 btnSeeNewTicket.Visible = false;
             }
         }
 
         private void btnSeeNewTicket_Click(object sender, EventArgs e)
         {
+           
             TicketDetails form = new TicketDetails();
             form.CheckedNew = true;
             form.ShowDialog();

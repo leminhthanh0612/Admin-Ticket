@@ -38,7 +38,7 @@
             // 
             this.lblStatusVe.AutoSize = true;
             this.lblStatusVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusVe.ForeColor = System.Drawing.Color.Lime;
+            this.lblStatusVe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblStatusVe.Location = new System.Drawing.Point(12, 9);
             this.lblStatusVe.Name = "lblStatusVe";
             this.lblStatusVe.Size = new System.Drawing.Size(60, 24);
@@ -69,6 +69,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblStatusVe);
             this.Name = "formNotification";
+            this.ShowIcon = false;
             this.Text = "Trạng thái vé";
             this.Load += new System.EventHandler(this.FormNotification_Load);
             this.ResumeLayout(false);
